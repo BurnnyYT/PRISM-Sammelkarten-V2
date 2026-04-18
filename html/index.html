@@ -5,12 +5,23 @@
 </head>
 <body>
 
-<div id="ui" style="display:none;">
-    <img id="img">
-    <button onclick="closeUI()">Schließen</button>
-</div>
+<div id="main-ui" style="display:none;">
 
-<div id="booster" style="display:none;"></div>
+    <div id="card-view" style="display:none;">
+        <img id="card-image">
+        <h2 id="card-name"></h2>
+
+        <div class="buttons">
+            <button onclick="closeUI()">Wegpacken</button>
+            <button id="binderButton" onclick="insertIntoBinder()">In Sammelbuch legen</button>
+        </div>
+    </div>
+
+    <div id="binder-view" style="display:none;"></div>
+
+    <div id="booster-view" style="display:none;"></div>
+
+</div>
 
 <script src="script.js"></script>
 </body>

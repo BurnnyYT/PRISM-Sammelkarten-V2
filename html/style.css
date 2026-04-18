@@ -1,20 +1,67 @@
 body {
-    margin: 0;
-    background: transparent;
-    font-family: Arial;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(15,15,15,0.96);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
 }
 
-#ui {
+#binder-view {
+    width: 1400px;
+    height: 800px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    background: #111;
-    color: white;
-    padding: 20px;
+    transform: translate(-50%, -50%);
+    background: url('../images/binder_background.png');
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    padding: 60px;
+}
+
+.binder-slot {
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.binder-slot:hover {
+    transform: scale(1.03);
+}
+
+.binder-slot img {
+    width: 140px;
     border-radius: 10px;
 }
 
-img {
-    width: 300px;
+#booster-view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 15px;
+}
+
+#booster-view img {
+    width: 180px;
+    animation: boosterReveal 0.4s ease;
+}
+
+@keyframes boosterReveal {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }

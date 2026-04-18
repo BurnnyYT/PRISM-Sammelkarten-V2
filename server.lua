@@ -4,7 +4,7 @@ math.randomseed(os.time())
 
 -- 🃏 Kartenliste (hier später automatisch erweiterbar)
 local Cards = {
-    { name = 'example', item = 'collectible_card_example', image = 'example.png', label = 'Beispiel Karte' },
+    { name = 'example', item = 'collectible_card_example', image = 'collectible_card_example.png', label = 'Beispiel Karte' },
     { name = 'card2', item = 'collectible_card_card2', image = 'example.png', label = 'Karte 2' },
     { name = 'card3', item = 'collectible_card_card3', image = 'example.png', label = 'Karte 3' }
 }

@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    background: transparent;
+    font-family: Arial;
+}
+
+#ui {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #111;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+img {
+    width: 300px;
+}

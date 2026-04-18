@@ -1,18 +1,21 @@
-RegisterNetEvent('collectiblecards:openCardUI', function(cardData)
+local ESX = exports['es_extended']:getSharedObject()
+
+RegisterNetEvent('collectiblecards:openCardUI', function(card, hasBinder)
     SetNuiFocus(true, true)
 
     SendNUIMessage({
         action = 'openCard',
-        card = cardData
+        card = card,
+        hasBinder = hasBinder
     })
 end)
 
-RegisterNetEvent('collectiblecards:openBinderUI', function(binderData)
+RegisterNetEvent('collectiblecards:openBinderUI', function(binder)
     SetNuiFocus(true, true)
 
     SendNUIMessage({
         action = 'openBinder',
-        binder = binderData
+        binder = binder
     })
 end)
 
@@ -32,5 +35,6 @@ end)
 
 RegisterNUICallback('insertIntoBinder', function(data, cb)
     TriggerServerEvent('collectiblecards:insertIntoBinder', data)
+    SetNuiFocus(false, false)
     cb('ok')
 end)

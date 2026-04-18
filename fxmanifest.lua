@@ -5,7 +5,15 @@ lua54 'yes'
 
 author 'BurnnyYT'
 description 'PRISM Sammelkarten System'
-version '0.0.1'
+version '0.0.2'
+
+ui_page 'html/index.html'
+
+dependencies {
+    'ox_inventory',
+    'ox_lib',
+    'es_extended'
+}
 
 shared_scripts {
     '@ox_lib/init.lua',
@@ -25,7 +33,6 @@ files {
     'html/index.html',
     'html/style.css',
     'html/script.js',
+    'html/missing.png',
     'images/*.png'
 }
-
-ui_page 'html/index.html'
